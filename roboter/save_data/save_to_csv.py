@@ -23,7 +23,14 @@ def save_raw_data(user_name, restaurant):
         fieldnames = ["Name", "Restaurant", "Count", "Timestamp"]
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         # writer.writeheader()
-        writer.writerow({"Name": user_name, "Restaurant": restaurant, "Count": 1, "Timestamp": timestamp})
+        writer.writerow(
+            {
+                "Name": user_name,
+                "Restaurant": restaurant,
+                "Count": 1,
+                "Timestamp": timestamp,
+            }
+        )
         # print(f"{user_name} has voted for {restaurant}")
 
 
@@ -39,22 +46,22 @@ def ranking_data():
 
 
 # def main():
-    # create_csv()
-    # save_raw_data(user_name, restaurant)
-    # try:
-    #     if not os.path.exists(raw_data):
-    #         create_csv()
-    #         print("CSV file created!")
-    #     # save_raw_data("Mark", "びっくりドンキー")
-    # except FileNotFoundError as e:
-    #     print(e)
-    #     sys.exit(1)
-    # else:
-    #     save_raw_data("ぺこら", "二郎")
-    # finally:
-    #     print("Done!")
+# create_csv()
+# save_raw_data(user_name, restaurant)
+# try:
+#     if not os.path.exists(raw_data):
+#         create_csv()
+#         print("CSV file created!")
+#     # save_raw_data("Mark", "びっくりドンキー")
+# except FileNotFoundError as e:
+#     print(e)
+#     sys.exit(1)
+# else:
+#     save_raw_data("ぺこら", "二郎")
+# finally:
+#     print("Done!")
 
-    # ranking_data()
+# ranking_data()
 
 # if __name__ == "__main__":
 #     main()

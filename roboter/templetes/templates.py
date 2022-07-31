@@ -14,5 +14,6 @@ def load_template(template_file):
 def main():
     load_template("frontpage/index_templates.html")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

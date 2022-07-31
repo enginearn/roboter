@@ -9,6 +9,7 @@ import save_data.save_to_csv
 #     restaurant = input("What restaurant do you like?\n")
 #     return user_name, restaurant
 
+
 def main():
     # user_name, restaurant = get_user_input()
     user = greeting.greeting.GreetAndQuestions()
@@ -18,6 +19,8 @@ def main():
 
     user.ask_restaurant()
     restaurant = user.restaurant
+    # if restaurant == "":
+    user.recommend_restaurant()
 
     if not os.path.exists("raw.csv"):
         save_data.save_to_csv.create_csv()
@@ -25,6 +28,7 @@ def main():
         save_data.save_to_csv.save_raw_data(user_name, restaurant)
 
     print(f"{user_name} has voted for {restaurant}!")
+
 
 if __name__ == "__main__":
     main()
